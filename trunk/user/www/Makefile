@@ -9,7 +9,7 @@ include $(ROOTDIR)/user/shared/boards.mk
 PROJECT_HOME_URL="https:\/\/bitbucket.org\/padavan\/rt-n56u\/"
 PROJECT_HOME_URL_MOD="https:\/\/github.com\/hanwckf\/rt-n56u\/"
 
-LABEL_COPYRIGHT_TEXT='Mua hàng <a href="https:\/\/shopee.vn\/wificu" target="blank">Shopee<\/a> \&- LH:0971.266.411 \&- Facebook <a href="https:\/\/facebook.com\/trumwificu" target="blank">TrumWifi<\/a>'
+LABEL_COPYRIGHT_TEXT='Mua hàng <a href="https:\/\/shopee.vn\/wificu" target="blank">Shopee<\/a> \- LH:0971.266.411 \- Facebook <a href="https:\/\/facebook.com\/trumwificu" target="blank">TrumWifi<\/a>'
 
 
 BOARD_PATTERN=s/ZVMODELVZ/$(CONFIG_FIRMWARE_PRODUCT_ID)/g
@@ -107,7 +107,7 @@ ifeq ($(CONFIG_FIRMWARE_INCLUDE_LANG_SV),y)
 	sed $(DWURL_PATTERN) -i $(ROMFS_DIR)/www/SV.dict
 endif
 ifeq ($(CONFIG_FIRMWARE_INCLUDE_LANG_UK),y)
-	echo "LANG_UK=Українська" >> $(ROMFS_DIR)/www/EN.header
+	echo "LANG_UK=Tiếng Việt" >> $(ROMFS_DIR)/www/EN.header
 	cp dict/UK.dict $(ROMFS_DIR)/www
 	sed $(BOARD_PATTERN) -i $(ROMFS_DIR)/www/UK.dict
 	sed $(COPYR_PATTERN) -i $(ROMFS_DIR)/www/UK.dict
